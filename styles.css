@@ -19,26 +19,68 @@ body{
 
     gap: 1rem;
     padding: 25px;
+
 }
 
-.header{
+.header {
     font-size: 100%;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-grid-column-start: 1;
-grid-column-end: 2;
-border: 5px solid black;
+    border: 5px solid black;
     border-radius: 10px;
-    padding: 1rem;
+    background-color: #1E3A8A;
+    color: white;
+    position: fixed;
+    top: 0; /* Optional: stick to top */
+    left: 0;
+    width: 100%; /* ✅ Add this */
+    z-index: 1000; /* Optional: keep it on top */
+  
 }
 
-.header p{
-    font-size: 1.5rem;
-    color: black;
-}
+  .links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+ background-color: black;
+ width: 100%;
+  }
+  .header h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(199, 199, 44);
+    font-size: 2rem;
+    color: rgb(17, 15, 15);
+    padding-bottom: 5px;
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+   
+  
+  }
+  .links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+
+
+
+
+
+
+
 .img2 {
     width: 65%;
     height: 45px;
@@ -58,30 +100,40 @@ border: 5px solid black;
     flex-direction: column;
     background-color: blue;
     border-radius: 10px;
+    padding: 10px;
     
     border: 5px solid black;
     transition: transform 0.7s ease-in-out; 
-   
+ margin-top: 80px;
     
 }
+
 .text-cont{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 5px;
+    font-family: "Cascadia Code", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
 }
 .author-container{
     display: flex;
     flex-direction: row;
    gap: 35px;
     padding: 10px;
+    justify-content: space-evenly;
+    align-items: center;
   
 }
 
 .author-left {
     display: flex;
     align-items: center;
+   
+    
     gap: 10px;
     
     
@@ -94,6 +146,7 @@ border: 5px solid black;
     align-items: center;
     border: 1px solid black;
     padding: 10px;
+ 
     
 }
 .footer{
@@ -111,6 +164,14 @@ border: 5px solid black;
 }
 
 
+@media (max-width: 500px) {
+  .box1{
+    margin-top: 220px;
+
+  }
+    }
+
+
 @media (min-width:500px) and (max-width: 800px) {
     .container{
         grid-template-columns: repeat(2, 1fr);
@@ -124,6 +185,13 @@ border: 5px solid black;
         grid-column-start: 1;
         grid-column-end: 3;
     }
+    .links{
+        flex-direction: row;
+    }
+    .footer{
+        margin-top: 25px;
+    }
+
 }
 @media (min-width:800px) and (max-width: 1200px) {
     .container{
@@ -141,6 +209,13 @@ border: 5px solid black;
     .author-container{
         justify-content: space-between;
     }
+    .links{
+        flex-direction: row;
+    }
+    .footer{
+        margin-top: 25px;
+    }
+
 }
 
 @media (min-width:1200px) {
@@ -155,6 +230,15 @@ border: 5px solid black;
     .footer{
         grid-column-start: 1;
         grid-column-end: 5;
+    }
+    .links{
+        flex-direction: row;
+    }
+    .blogbox{
+        padding: 20px;
+    }
+    .footer{
+        margin-top: 25px;
     }
 }
 .social-icons img{
@@ -179,10 +263,7 @@ body {
     color: #4B5563;
 }
 
-.header {
-    background-color: #1E3A8A;
-    color: white;
-}
+
 
 .blogbox {
     background-color: #FFFFFF;
@@ -198,8 +279,13 @@ h2 {
 }
 
  .authorfield {
-    background-color: #383c45;
+    height: 75%;
+    width: auto;
+
+    background-color: #173477;
     color: white;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
   
