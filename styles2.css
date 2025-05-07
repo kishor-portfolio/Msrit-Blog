@@ -1,114 +1,193 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    height: 100vh;
-    width: 100vw;
+body {
+  height: 100vh;
+  width: 100vw;
+  color: black;
 }
-.container{
-    display: grid;
-  
-    width: 100%;
-    height: 100%;
-    background-color:white;
-     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(9, 1fr); 
-    /* grid-auto-rows: repeat(10, 1fr);  */
+.container {
+  display: grid;
 
-    gap: 1rem;
-    padding: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  /* grid-auto-rows: repeat(10, 1fr);  */
 
-}
-.item{
-    background-color: blue;
+  gap: 1rem;
+  padding: 25px;
 }
 
-.item{
-display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: white;
-    border-radius: 10px;
-    flex-direction: column;
-    font-size: 15px;
-    padding: 10px;
-    height: 100%;
-    width: 50%;
-  
-
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: black;
+  border-radius: 10px;
+  flex-direction: column;
+  font-size: 15px;
+  padding: 25px;
+  height: 100%;
+  width: 50%;
+  background-color: whitesmoke;
+}
+/* .box1{
+  box-shadow: rgb(228, 159, 159) 5px 10px 20px;
+}
+.box2{
+  box-shadow: rgb(156, 223, 181) 5px 10px 20px;
+} */
+.title {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: 200;
+  color: black;
+  text-align: left;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 4px;
+  font-family: "Frijole", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 .item ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
-  
-.item img{
-    width: 95%;
-    height: 55%;
-    border-radius: 10px;
-    border: 2px solid black;
+  list-style-type: disc;
+  padding-left: 20px;
+  padding: 20px;
+  /* margin-top: 5px; */
 }
-/* .box2 {
-    margin-left: auto;
+
+.item img {
+  width: 95%;
+  height: 55%;
+  border-radius: 5px;
+  /* border: 2px solid rgb(15, 14, 14); */
+  padding: 0;
+  box-shadow: rgb(58, 52, 52) 5px 5px 5px 5px;
+  z-index: 1;
 }
-.box4{
-    margin-left: auto;
-}
-.box6{
-    margin-left: auto;
-}
-.box8{
-    margin-left: auto;
-} */
+
 @media (max-width: 750px) {
-    .container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(7, 1fr);
-      justify-content: center;
-      align-items: center;
-      
-      /* width: 100%;
+  .container {
+    display: grid;
+    /* grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(7, 1fr); */
+    justify-content: center;
+    align-items: center;
+
+    /* width: 100%;
       max-width: 900px; 
       margin: 0 auto;     */
-    }
-  
-    .item {
-      width: 65%;
-      height: 100%;
-      margin: 0 auto;     /* center each item inside the grid cell */
-    }
   }
-  @media (min-width: 900px) {
-    .container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr); /* Two columns for zig-zag */
-     
-      gap: 20px;
-      justify-content: center;
-      align-items: center;
-  max-width: 900px; /* Optional: Set a max width for the grid */
-      margin: 0 auto;
-    }
-  
-    .item {
-      width: 400px;
-      max-width: 100%;
-    }
-  
-    /* Align specific boxes to right side */
-    .box2, .box4, .box6, .box8 {
-      justify-self: end; /* Push to right column */
-    }
-  
-    /* Optional: Make sure others align left (not strictly needed) */
-    .box1, .box3, .box5, .box7 {
-      justify-self: start;
-    }
+
+  .item {
+    width: 65%;
+    height: 100%;
+    margin: 0 auto; /* center each item inside the grid cell */
   }
+}
+@media (max-width:350px){
+ .container{
+  padding: 5px;
+ }
+  }
+  .item{
+    
+    width:340px ;
+    height: auto;
+  }
+
+@media (min-width: 900px) {
+  .container {
+    display: grid;
+    /* grid-template-columns: repeat(1, 1fr); */
+
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px; /* Optional: Set a max width for the grid */
+    margin: 0 auto;
+  }
+
+  .item {
+    width: 400px;
+    max-width: 100%;
+  }
+
+  /* Align specific boxes to right side */
+  .box2,
+  .box4,
+  .box6,
+  .box8 {
+    justify-self: end; /* Push to right column */
+  }
+
+  /* Optional: Make sure others align left (not strictly needed) */
+  .box1,
+  .box3,
+  .box5,
+  .box7 {
+    justify-self: start;
+  }
+}
+.title1 {
+  color: red;
+}
+.title2 {
+  color: green;
+}
+.title3 {
+  color: blue;
+}
+.title4 {
+  color: orange;
+}
+.title5 {
+  color: purple;
+}
+.title6 {
+  color: rgb(70, 8, 19);
+}
+.title7 {
+  color: brown;
+}
+pre {
+  color: black;
+  font-family: "Revalia", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+ul {
+  margin-top: 25px;
+  padding: 25px;
+  width: 100%;
+  font-family: "Rowdies", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  background-color: whitesmoke;
+  box-shadow: rgb(1, 1, 1) 5px 10px 20px;
+  border-radius: 25px;
+}
+.box0{
   
-  
+  padding: 25px;
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+ 
+}
+.box0 h1{
+  font-family: "Monoton", sans-serif;
+font-weight: 600;
+font-style: normal;
+}
+.box0 p{
+  font-family: "Revalia", sans-serif;
+}
