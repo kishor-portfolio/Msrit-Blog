@@ -14,22 +14,43 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr;
+  
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+   
+  
   gap: 1rem;
   padding: 25px;
   width: 100%;
+ 
+ 
+      /* Adds space inside */
 }
 
+
 .item {
-  background-color: 	#e4b77b;
+  background-color: 	#bdeca3;
   border-radius: 10px;
   padding: 25px;
   display: flex;
   flex-direction: column;
   color:	#333;
   box-shadow: rgba(0, 0, 0, 0.1);
+  box-shadow: black 10px 5px 10px;
+ margin-right: 30px;
+  
+ 
 }
-
+h2{
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.inner label{
+  font-family: "Rock Salt", cursive;
+  font-weight: 900;
+  font-style: normal;
+}
 .inner {
   display: flex;
   flex-direction: column;
@@ -45,7 +66,12 @@ textarea {
   border-radius: 5px;
   font-size: 14px;
   margin-top: 10px;
+  border: 1.5px solid #161515;
+  box-shadow: black 0.2px 0.2px 3px;
+ 
+
 }
+
 
 #submit {
   margin-top: 10px;
@@ -67,16 +93,67 @@ textarea {
   align-items: center;
   gap: 10px;
   font-size: 14px;
+  box-shadow: black 0.2px 0.2px 3px;
+  background-color: azure;
+  font-size: large;
+ height: 45px;
+ padding: 10px;
+ border: 2px solid #161515;
+  border-radius: 5px;
+  text-decoration: none;
+  
 }
-
+a{
+  text-decoration: none;
+  color: black;
+}
+.box3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+  gap: 10px;
+  
+  padding: 25px;
+  border-radius: 10px;
+  color: #333;
+  grid-column: 1/2;
+ 
+  /* box-shadow: black 10px 5px 10px; */
+}
+.box3 iframe{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    gap: 10px;
+    
+    padding: 25px;
+    border-radius: 10px;
+    color: #333;
+    
+    box-shadow: rgb(186, 10, 10) 5px 7px 10px;
+  
+}
 /* Responsive layout for wider screens */
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-right: 5px;
   }
   .firstname{
     display: flex;
     flex-direction: row;
   }
+  .box3{
+   
+    grid-column: span 2;
+  }
+ 
   
 }
+
