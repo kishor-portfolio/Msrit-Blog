@@ -21,18 +21,19 @@ body {
 }
 
 .item {
-  background-color: whitesmoke;
+  background-color: 	#e4b77b;
   border-radius: 10px;
   padding: 25px;
   display: flex;
   flex-direction: column;
-  color: black;
+  color:	#333;
+  box-shadow: rgba(0, 0, 0, 0.1);
 }
 
 .inner {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
 }
 
 input.cont,
@@ -43,12 +44,13 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
+  margin-top: 10px;
 }
 
 #submit {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #1e90ff;
+  background-color: #1e88e5 ;
   border: none;
   border-radius: 5px;
   color: white;
