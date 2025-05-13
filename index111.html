@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life at MSRIT Hostel | Kishor's Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f7;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            color: #e94560;
+        }
+        
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #e94560, #ff7b54);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 5px 0;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        nav a:hover {
+            color: #e94560;
+        }
+        
+        /* Blog Post Styles */
+        .blog-container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .blog-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .blog-content {
+            font-size: 1.1rem;
+            color: #444;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid #1a73e8;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .tags {
+            display: flex;
+            gap: 10px;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background-color: #e94560;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 4rem;
+            padding: 2rem;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+        
+        .author-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .author-info h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-info p {
+            color: #666;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 1.5rem 0;
+        }
+        
+        .footer-social a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            color: #e94560;
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+            
+            .blog-image {
+                height: 300px;
+            }
+            
+            .author-box {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <div class="logo-text">MSRIT Chronicles</div>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="blog-container">
+        <article>
+            <header class="blog-header">
+                <h1 class="blog-title">Life at MSRIT Hostel: My First Month Experience</h1>
+                <div class="blog-meta">
+                    <span><i class="far fa-user"></i> Kishor Sr</span>
+                    <span><i class="far fa-calendar-alt"></i> 10/10/2025</span>
+                </div>
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="MSRIT Hostel" class="blog-image">
+            </header>
+            
+            <div class="blog-content">
+                <p>Staying away from home for the first time was one of the most daunting experiences I've ever faced. The thought of living with complete strangers, managing my own schedule, and being responsible for everything from laundry to meals was overwhelming. But from the moment I stepped into the MSRIT hostel, I knew this would become my second home.</p>
+                
+                <div class="highlight-box">
+                    <p>The hostel wardens and staff went out of their way to make us feel comfortable. Their friendly approach and constant support made the transition much smoother than I anticipated.</p>
+                </div>
+                
+                <p>The rooms are surprisingly spacious and well-maintained, with regular cleaning services that keep everything spotless. Each room has comfortable beds, study tables, and ample storage space. The common areas are where the real magic happens though - the TV lounge becomes a battlefield during cricket matches, the common room turns into a study hub during exams, and the courtyard is perfect for those late-night conversations.</p>
+                
+                <p>What surprised me most was how quickly the other hostelites became like family. Those initial awkward introductions turned into lifelong friendships within weeks. Our late-night Maggi sessions (cooked on a hidden hotplate, of course) have become legendary, with each of us bringing our own "secret ingredient" to make it special.</p>
+                
+                <p>The hostel food gets a bad reputation, but honestly, it's not that bad once you get used to it. Sure, there are days when you miss home cooking, but the mess staff tries their best to provide variety. And when we really crave something different, there's always the option to order in or explore the countless food joints near campus.</p>
+                
+                <p>One month in, and I can't imagine my college life without the hostel experience. The independence, the friendships, the shared experiences - it's all shaping me into a more confident and capable person. Sure, I still miss home sometimes, but now I have a new family here at MSRIT hostel.</p>
+            </div>
+            
+            <div class="tags">
+                <span class="tag">Hostel Life</span>
+                <span class="tag">MSRIT</span>
+                <span class="tag">College Experience</span>
+                <span class="tag">First Year</span>
+            </div>
+            
+            <div class="author-box">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Kishor Sr" class="author-avatar">
+                <div class="author-info">
+                    <h3>About the Author</h3>
+                    <p>Kishor Sr is a second-year Computer Science student at MSRIT. An avid photographer and travel enthusiast, he documents his college experiences through writing and photography.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>MSRIT Chronicles</h3>
+            <p>Stories from campus life</p>
+            
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            
+            <p class="copyright">&copy; 2025 MSRIT Chronicles. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
